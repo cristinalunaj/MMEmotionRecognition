@@ -123,7 +123,7 @@ def prepare_RAVDESS_DS(path_audios):
 
 
 
-def generate_train_test(fold, df, save_path):
+def generate_train_test(fold, df, save_path=""):
     """
     Divide the data in train and test in a subject-wise 5-CV way. The division is generated before running the training
     of each fold.
@@ -146,8 +146,9 @@ def generate_train_test(fold, df, save_path):
     train_df = train_df.reset_index(drop=True)
     test_df = test_df.reset_index(drop=True)
 
-    train_df.to_csv(f"{save_path}/train.csv", sep="\t", encoding="utf-8", index=False)
-    test_df.to_csv(f"{save_path}/test.csv", sep="\t", encoding="utf-8", index=False)
+    if(save_path!=""):
+        train_df.to_csv(f"{save_path}/train.csv", sep="\t", encoding="utf-8", index=False)
+        test_df.to_csv(f"{save_path}/test.csv", sep="\t", encoding="utf-8", index=False)
     return train_df, test_df
 
 def speech_file_to_array_fn(path):

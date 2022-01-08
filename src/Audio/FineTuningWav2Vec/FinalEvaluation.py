@@ -30,13 +30,10 @@ from transformers import AutoConfig
 
 def extract_acc_from_posteriors(path_posteriors_root, dict_emotions, set = "test"):
     """
-    Generate predictions from the model and append to the batch dict the posteriors and predictions
-
-    :param batch:[dict] Dict with the data
-                            -speech: input audio recordings [IN]
-                            -posteriors: Array with the weight of each of the ourput neuron assigned to each class [OUT]
-                            -predicted : Predicted class with the highest posterior [OUT]
-
+    Generate accuracy
+    :param path_posteriors_root:[str] Path to the posteriors
+    :param: dict_emotions [dict]: Mapping between the names of the emotions and its associated neuron
+    :param set:[str] Set to obtain the accuracy (train or test)
     """
     acc = 0
     for fold in range(5):
