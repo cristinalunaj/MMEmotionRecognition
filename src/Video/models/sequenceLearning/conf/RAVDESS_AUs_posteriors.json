@@ -1,0 +1,37 @@
+{
+	"name": "RAVDESS_AUs",
+	"data_type": "pathCSV",
+	"model_name": "Sequence1Modal",
+	"inference_data": "val",
+	"OUT_PATH": "<RAVDESS_dir>/FUSION/wav2Vec_AUs/BiLSTM_AUS/posteriors",
+	"TRAINED_PATH": "MMEmotionRecognition/src/Video/models/sequenceLearning/out/trained,",
+	"input_size": 35,
+	"model_params":
+	{"encoder":
+		{
+			"dim": 50,
+			"layers": 2,
+			"dropout": 0.3,
+			"bidirectional": true
+
+		},
+	"attention":
+		{
+			"layers":2,
+			"dropout": 0.3,
+			"activation": "tanh",
+			"context": false
+		}
+	},
+	"preprocessor": null,
+	"batch_size": 64,
+	"lr": 1e-3,
+	"weight_decay": 0.0,
+	"patience": 30,
+	"min_change": 0.0,
+	"epochs": 300,
+	"base": 0.0,
+	"clip_norm": 1,
+	"seed": 2020,
+	"disable_cache": true
+}
