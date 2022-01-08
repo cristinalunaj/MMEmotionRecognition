@@ -1,6 +1,7 @@
 # AUs + Sequential Models 
 Modified version from the code of the repository: https://github.com/affectivepixelsteam/sequenceLearning
 
+
 ## 1. Create the configuration file
     
 Create the configuration file in sequenceLearning/conf/RAVDESS_AUs.json. This file specifies information about the input format

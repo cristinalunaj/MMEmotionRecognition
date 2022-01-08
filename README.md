@@ -159,6 +159,36 @@ See README in MMEmotionRecognition/src/Video/models/sequenceLearning/README_AUS.
 ## Fusion
 ![FusionArchitecture](data/resources/imgs/FusionArquitecture.png)
 
+###Training & Evaluation
+
+    python3 MMEmotionRecognition/src/Fusion/FusionTraining.py 
+    --embs_dir_wav2vec <RAVDESS_dir>/FineTuningWav2Vec2_posteriors/20211020_094500
+    --embs_dir_biLSTM <RAVDESS_dir>/FUSION/wav2Vec_AUs/BiLSTM_AUS/posteriors
+    --embs_dir_MLP MMEmotionRecognition/data/models/avg_MLP80_AUs/posteriors
+    --out_dir <RAVDESS_dir>/FUSION/posteriors
+    --model_number 2
+    --param 1.0
+    --type_of_norm 1
+
+
+To replicate our results, run: 
+
+    python3 MMEmotionRecognition/src/Fusion/FusionTraining.py 
+    --embs_dir_wav2vec MMEmotionRecognition/data/models/wav2Vec_top_models/FineTuning/posteriors/20211020_094500
+    --embs_dir_biLSTM MMEmotionRecognition/data/models/AUs_biLSTM_6213/posteriorsv2
+    --embs_dir_MLP MMEmotionRecognition/data/models/avg_MLP80_AUs/posteriors
+    --out_dir ''
+    --model_number 2
+    --param 1.0
+    --type_of_norm 1
+
+###Results Fusion
+Top model Avg. Accuracy: 86.70%
+
+![ResultsFusion](data/resources/imgs/fusionResults.png)
+
+
+
 ## FAQ
 
 ### License:
