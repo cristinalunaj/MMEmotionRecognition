@@ -30,6 +30,8 @@ Once downloaded, put them in your working directory, in what follows, we will re
 * \<RAVDESS_dir> : Root Directory where we downloaded RAVDESS dataset
 
 
+
+
 ## Prepare dataset (5 CV)
 For evaluating our models, we used a subject-wise 5CV. The distribution per actor for the validation folds was as follows:
 
@@ -64,6 +66,8 @@ To fine-tune the xlsr-Wav2Vec2.0 model, run:
     --model_id jonatasgrosman/wav2vec2-large-xlsr-53-english
 
 After finishing the fine-tuning process, the datasets and the trained models will be saved in the folder <RAVDESS_dir>/FineTuningWav2Vec2_out
+
+**Important Note:** Results can vary a little from the reported in the paper because we added some extra lines to optimize the saving of the weights, which affects to the randomization of the training
 
 #### Evaluation
 To evaluate and get some metrics of the trained model, you should run the Wav2Vec2.0 script, as in the example below. Notice that you should modify
@@ -168,7 +172,7 @@ See README in MMEmotionRecognition/src/Video/models/sequenceLearning/README_AUS.
     python3 MMEmotionRecognition/src/Fusion/FusionTraining.py 
     --embs_dir_wav2vec <RAVDESS_dir>/FineTuningWav2Vec2_posteriors/20211020_094500
     --embs_dir_biLSTM <RAVDESS_dir>/FUSION/wav2Vec_AUs/BiLSTM_AUS/posteriors
-    --embs_dir_MLP MMEmotionRecognition/data/models/avg_MLP80_AUs/posteriors
+    --embs_dir_MLP MMEmotionRecognition/data/posteriors/avg_MLP80_AUs/posteriors
     --out_dir <RAVDESS_dir>/FUSION/posteriors
     --model_number 2
     --param 1.0
@@ -178,9 +182,9 @@ See README in MMEmotionRecognition/src/Video/models/sequenceLearning/README_AUS.
 To replicate our results, run: 
 
     python3 MMEmotionRecognition/src/Fusion/FusionTraining.py 
-    --embs_dir_wav2vec MMEmotionRecognition/data/models/wav2Vec_top_models/FineTuning/posteriors/20211020_094500
+    --embs_dir_wav2vec MMEmotionRecognition/data/posteriors/wav2Vec/posteriors/20211020_094500
     --embs_dir_biLSTM MMEmotionRecognition/data/posteriors/AUs_biLSTM_6213/posteriorsv2
-    --embs_dir_MLP MMEmotionRecognition/data/models/avg_MLP80_AUs/posteriors
+    --embs_dir_MLP MMEmotionRecognition/data/posteriors/avg_MLP80_AUs/posteriors
     --out_dir ''
     --model_number 2
     --param 1.0
@@ -194,6 +198,12 @@ Top model Avg. Accuracy: 86.70%
 
 
 ## FAQ
+
+### Trained models:
+To download the weights of the trained models (only Wav2Vec2.0 and bi-LSTM), click on this link:
+
+...
+
 
 ### License:
 MIT License
