@@ -2,7 +2,7 @@
 Repository with the code of the paper: [A proposal for Multimodal Emotion Recognition using aural transformers and Action Units on RAVDESS dataset](https://www.mdpi.com/2076-3417/12/1/327)
 
 
-(UNDER DEVELOPMENT ....)
+
 ## Installation
 
 Install ffmpeg from:
@@ -200,9 +200,10 @@ Top model Avg. Accuracy: 86.70%
 ## FAQ
 
 ### Trained models:
-To download the weights of the trained models (only Wav2Vec2.0 and bi-LSTM), click on this link:
+To download the weights of the trained models (only Wav2Vec2.0 and bi-LSTM), click on this linkB (~16GB):
 
-...
+https://drive.upm.es/s/AYULcdl44m2Tj8C
+
 
 
 ### License:
