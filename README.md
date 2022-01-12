@@ -5,6 +5,10 @@ Repository with the code of the paper: [A proposal for Multimodal Emotion Recogn
 (UNDER DEVELOPMENT ....)
 ## Installation
 
+Install ffmpeg from:
+
+    https://www.ffmpeg.org/download.html#build-linux
+
 To install the python packages, create a new virtual environment and run:
 
     pip install git+https://github.com/huggingface/datasets.git
