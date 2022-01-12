@@ -179,7 +179,7 @@ To replicate our results, run:
 
     python3 MMEmotionRecognition/src/Fusion/FusionTraining.py 
     --embs_dir_wav2vec MMEmotionRecognition/data/models/wav2Vec_top_models/FineTuning/posteriors/20211020_094500
-    --embs_dir_biLSTM MMEmotionRecognition/data/models/AUs_biLSTM_6213/posteriorsv2
+    --embs_dir_biLSTM MMEmotionRecognition/data/posteriors/AUs_biLSTM_6213/posteriorsv2
     --embs_dir_MLP MMEmotionRecognition/data/models/avg_MLP80_AUs/posteriors
     --out_dir ''
     --model_number 2
