@@ -23,7 +23,7 @@ For reproducing the experiments, firt you need to download the dataset used for 
 
 - [x] [RAVDESS](https://zenodo.org/record/1188976#.YFZuJ0j7SL8)
 
-
+**IMPORTANT NOTE: For training/testing the models, we only use 1.440 videos (only speech channel) not songs. See in MMEmotionRecognition/data/ravdess_videos.csv the name of these files.
 
 Once downloaded, put them in your working directory, in what follows, we will refer to these directories as: 
 
@@ -190,20 +190,28 @@ To replicate our results, run:
     --param 1.0
     --type_of_norm 1
 
-###Results Fusion
+##Results Fusion
 Top model Avg. Accuracy: 86.70%
 
 ![ResultsFusion](data/resources/imgs/fusionResults.png)
 
 
 
-## FAQ
+## FAQs
 
 ### Trained models:
 To download the weights of the trained models (only Wav2Vec2.0 and bi-LSTM), click on this linkB (~16GB):
 
 https://drive.upm.es/s/AYULcdl44m2Tj8C
 
+### Which videos should I use?
+In total, they have to be 1440.
+Check MMEmotionRecognition/data/ravdess_videos.csv for a complete list of the names of the used videos.
+
+### Which are the outputs of the trained models?
+Trained models follow this dictionary to do the predictions: 
+{'Angry': 0, 'Calm': 1, 'Disgust': 2, 'Fear': 3, 'Happy': 4, 'Neutral': 5, 'Sad': 6, 'Surprise': 7}
+So,e.g. if we introduce a sample whose ground-truth is 'Angry', ideally, we would receive at the output something like: [1,0,0,0,0,0,0,0]
 
 
 ### License:
