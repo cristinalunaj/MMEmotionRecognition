@@ -51,7 +51,7 @@ For evaluating our models, we used a subject-wise 5CV. The distribution per acto
 ### Pre-processing
 To extract the audios from the videos and change their format to 16kHz & single channel, run: 
     
-    python3 MMEmotionRecognition/src/Audio/FineTuningWav2Vec/process_audio.py
+    python3 MMEmotionRecognition/src/Audio/preProcessing/process_audio.py
              --videos_dir <RAVDESS_dir>/videos
              --out_dir <RAVDESS_dir>/audios_16kHz
 
