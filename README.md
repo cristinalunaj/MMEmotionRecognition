@@ -19,7 +19,7 @@ To install the python packages, create a new virtual environment and run:
 and run again the previous command
 
 ## Download datasets
-For reproducing the experiments, firt you need to download the dataset used for the experiments: 
+For reproducing the experiments, first you need to download the dataset used for the experiments: 
 
 - [x] [RAVDESS](https://zenodo.org/record/1188976#.YFZuJ0j7SL8)
 
